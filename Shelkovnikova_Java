@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // ===== ЗАДАЧА 1 =====
+        System.out.println("Задача 1. Введите два целых числа:");
+        System.out.print("a = ");
+        int a = scanner.nextInt();
+
+        System.out.print("b = ");
+        int b = scanner.nextInt();
+
+        // Сравнение чисел
+        if (a > b) {
+            System.out.println("a > b");
+        } else if (a < b) {
+            System.out.println("a < b");
+        } else {
+            System.out.println("a = b");
+        }
+
+        // Арифметические операции
+        System.out.println("Сложение: " + (a + b));
+        System.out.println("Вычитание: " + (a - b));
+        System.out.println("Умножение: " + (a * b));
+
+        if (b != 0) {
+            System.out.println("Деление: " + (a / b));
+        } else {
+            System.out.println("Деление: невозможно (деление на 0)");
+        }
+
+        // ===== ЗАДАЧА 2 =====
+        scanner.nextLine(); // очистка буфера
+
+        System.out.println("\nЗадача 2. Введите две строки:");
+        System.out.print("Строка a: ");
+        String strA = scanner.nextLine();
+
+        System.out.print("Строка b: ");
+        String strB = scanner.nextLine();
+
+        if (strA.equals(strB)) {
+            System.out.println("Строки идентичны");
+        } else {
+            System.out.println("Строки неидентичны");
+        }
+
+        // ===== ЗАДАЧА 3 =====
+        System.out.println("\nЗадача 3. Чётные числа массива:");
+
+        int[] numbers = {1,2,3,4,5,6,7,8,9,10};
+
+        for (int num : numbers) {
+            if (num % 2 == 0) {
+                System.out.print(num + " ");
+            }
+        }
+
+        scanner.close();
+    }
+}
